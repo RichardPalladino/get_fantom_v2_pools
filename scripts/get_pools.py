@@ -254,13 +254,13 @@ def main() -> None:
         print(f"{factory_name} currently has {num_pools} liquidity pools")
         # Output the current state of the pairs and LP list dictionaries
         tmp_json = json.dumps(pairs, indent=3)
-        with open("lp_dictionary.json", "w") as f_out:
+        with open("reports/lp_dictionary.json", "w") as f_out:
             f_out.write(tmp_json)
         tmp_json = json.dumps(factory_lps, indent=3)
-        with open("lps_per_dex.json", "w") as f_out:
+        with open("reports/lps_per_dex.json", "w") as f_out:
             f_out.write(tmp_json)
         tmp_json = json.dumps(bogus_addresses, indent=3)
-        with open("invalid_addresses.json", "w") as f_out:
+        with open("reports/invalid_addresses.json", "w") as f_out:
             f_out.write(tmp_json)
 
     end_time = perf_counter()
