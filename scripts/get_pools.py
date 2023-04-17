@@ -116,7 +116,7 @@ def main() -> None:
         factory_address = str(factory.address)
         factory_lps[factory_address] = []
         # Loop through each LP listed in the Factory
-        for i in range(0, num_pools):
+        for i in range(23132, num_pools):
             try:
                 tmp_lp_address = factory.allPairs(i)
             except Exception as err:
